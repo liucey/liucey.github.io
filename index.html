@@ -7,12 +7,14 @@
     <style>
         :root {
             --primary-color: #fa0000;
-            --primarytab-color: #6e6d6d;
-            --primary-dark: #000000;
-            --primary-light: #a18484;
-            --text-color: #222;
+            --primarytab-color: #ededed; /*分类栏底色*/
+            --primary-dark: #6b6b6b;    /*导航栏底色*/
+            --primary-light: #b2b2b2; /*选择标签背景*/
+            --text-color: #222;  
             --light-text: #f5f5f5;
+            --tab-ligh-text: #121212;  /*链接字体颜色*/
             --bg-color: #f9f9f9;
+            --icon-color: #fd0404;
         }
 
         * {
@@ -53,7 +55,7 @@
         }
 
         .search-box {
-            width: 50%;
+            width: 40%;
         }
 
         .search-box input {
@@ -119,7 +121,7 @@
 
         .category-header {
             background-color: var(--primarytab-color);
-            color: var(--light-text);
+            color: var(--tab-light-text);
             padding: 15px 20px;
             font-size: 20px;
             display: flex;
@@ -218,14 +220,16 @@
             <li><a href="#floor_2">加能站</a></li>
             <li><a href="#floor_3">综合</a></li>
             <li><a href="#floor_4">零售</a></li>
-            <li><a href="#floor_5">捷易</a></li>
-            <li><a href="#floor_6">HSE</a></li>
-            <li><a href="#floor_7">发规</a></li>
-            <li><a href="#floor_8">商流</a></li>
-            <li><a href="#floor_9">党政</a></li>
-            <li><a href="#floor_10">人事</a></li>
-            <li><a href="#floor_11">运维</a></li>
-            <li><a href="#floor_12">企网</a></li>
+            <li><a href="#floor_5">易捷</a></li>
+            <li><a href="#floor_6">财务</a></li>
+            <li><a href="#floor_7">HSE</a></li>            
+            <li><a href="#floor_8">发规</a></li>
+            <li><a href="#floor_9">商流</a></li>
+            <li><a href="#floor_10">党政</a></li>
+            <li><a href="#floor_11">人事</a></li>
+            <li><a href="#floor_12">运维</a></li>
+            <li><a href="#floor_13">企网</a></li>
+            <li><a href="#floor_14">外网</a></li>
 
         </ul>
     </div>
@@ -731,7 +735,7 @@
                 </a>
             </div>
             <div class="site-item">
-                <a href="https://saas.csc.sinopec.com" target="_blank">
+                <a href="hhttps://saas.csc.sinopec.com" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36 32C40.4183 32 44 28.4183 44 24C44 19.5817 40.4183 16 36 16" fill="#fd0404"/><path d="M36 32V32C40.4183 32 44 28.4183 44 24C44 19.5817 40.4183 16 36 16" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M12 16C7.58172 16 4 19.5817 4 24C4 28.4183 7.58172 32 12 32" fill="#fd0404"/><path d="M12 16C7.58172 16 4 19.5817 4 24C4 28.4183 7.58172 32 12 32V32" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M12 32V31.5V29V24V16C12 9.37258 17.3726 4 24 4C30.6274 4 36 9.37258 36 16V32C36 38.6274 30.6274 44 24 44" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
                         <div class="site-name">化石国中智能客服系统</div>
@@ -812,8 +816,7 @@
                         <div class="site-desc">增值税发票管理系统</div>
                     </div>
                 </a>
-            </div>
- 
+            </div> 
             <div class="site-item">
                 <a href="https://mdm.sinopec.com" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 31C44 36.5228 39.5228 41 34 41C32.2091 41 30.5281 40.5292 29.0741 39.7046C26.5143 38.2529 24.6579 35.7046 24.1436 32.6983C24.0492 32.1463 24 31.5789 24 31C24 28.4323 24.9678 26.0906 26.5585 24.3198C28.3892 22.2818 31.0449 21 34 21C39.5228 21 44 25.4772 44 31Z" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 12V20V21C31.0449 21 28.3892 22.2818 26.5585 24.3198C24.9678 26.0906 24 28.4323 24 31C24 31.5789 24.0492 32.1463 24.1436 32.6983C24.6579 35.7046 26.5143 38.2529 29.0741 39.7046C26.4116 40.5096 22.8776 41 19 41C10.7157 41 4 38.7614 4 36V28V20V12" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 12C34 14.7614 27.2843 17 19 17C10.7157 17 4 14.7614 4 12C4 9.23858 10.7157 7 19 7C27.2843 7 34 9.23858 34 12Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 28C4 30.7614 10.7157 33 19 33C20.807 33 22.5393 32.8935 24.1436 32.6983" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20C4 22.7614 10.7157 25 19 25C21.7563 25 24.339 24.7522 26.5585 24.3198" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 41C34 41 30.5 35.1375 30.5 31C30.5 26.8625 34 21 34 21" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 41C34 41 37.5 35.1375 37.5 31C37.5 26.8625 34 21 34 21" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 31H24" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -840,7 +843,7 @@
 
     <section class="category" id="floor_5">
         <div class="category-header">
-            <h5>05 捷易非油品</h5>
+            <h5>05 易捷非油品</h5>
         </div>
         <div class="category-content">
           <div class="site-item">
@@ -883,11 +886,72 @@
 
         </div>
     </section>
+
     <!-- 第六层网址导航 -->
 
     <section class="category" id="floor_6">
         <div class="category-header">
-            <h5>06 HSE数质量</h5>
+            <h5>06 财务管理</h5>
+        </div>
+        <div class="category-content">
+            <div class="site-item">
+                <a href="https://fsp.sinopec.com/#/index" target="_blank">
+                    <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 17V44H38V17" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 22L10 17L24 4L38 17L43 22" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 19L24 25L29 19" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 31H30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 25H30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 25V37" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">财务数智化平台</div>
+                        <div class="site-desc">化石国中财务信息系统门户</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="http://fss.sinopec.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="14" cy="10" rx="10" ry="5" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 10C4 10 4 14.2386 4 17C4 19.7614 8.47715 22 14 22C19.5228 22 24 19.7614 24 17C24 15.3644 24 10 24 10" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17C4 17 4 21.2386 4 24C4 26.7614 8.47715 29 14 29C19.5228 29 24 26.7614 24 24C24 22.3644 24 17 24 17" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24C4 24 4 28.2386 4 31C4 33.7614 8.47715 36 14 36C19.5228 36 24 33.7614 24 31C24 29.3644 24 24 24 24" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 31C4 31 4 35.2386 4 38C4 40.7614 8.47715 43 14 43C19.5228 43 24 40.7614 24 38C24 36.3644 24 31 24 31" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="34" cy="24" rx="10" ry="5" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 24C24 24 24 28.2386 24 31C24 33.7614 28.4772 36 34 36C39.5228 36 44 33.7614 44 31C44 29.3644 44 24 44 24" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 31C24 31 24 35.2386 24 38C24 40.7614 28.4772 43 34 43C39.5228 43 44 40.7614 44 38C44 36.3644 44 31 44 31" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">财务共享自助门户</div>
+                        <div class="site-desc">化石国中财务共享自助门户</div>
+                    </div>
+                </a>
+            </div>
+                        <div class="site-item">
+                <a href="https://10.249.203.241/POS/index.jsp" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M39 7H9C6.23858 7 4 9.23858 4 12V36C4 38.7614 6.23858 41 9 41H39C41.7614 41 44 38.7614 44 36V12C44 9.23858 41.7614 7 39 7Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M18 15L24 21L30 15" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 23H31" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 29H31" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 23V34" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">资金监管系统</div>
+                        <div class="site-desc">销售企业资金监管系统</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="http://10.5.85.20/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8H11C11 8 12 13 17 13C22 13 23 8 23 8H44V40H23C23 40 22 35 17 35C12 35 11 40 11 40H4V8Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 19V21" stroke="#FFF" stroke-width="4" stroke-linecap="round"/><path d="M17 27L17 29" stroke="#FFF" stroke-width="4" stroke-linecap="round"/><path d="M25 21H36" stroke="#FFF" stroke-width="4" stroke-linecap="round"/><path d="M25 27H36" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">增值税发票管理系统</div>
+                        <div class="site-desc">增值税发票管理系统</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="http://10.190.1.239/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 8H11C11 8 12 13 17 13C22 13 23 8 23 8H44V40H23C23 40 22 35 17 35C12 35 11 40 11 40H4V8Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 19V21" stroke="#FFF" stroke-width="4" stroke-linecap="round"/><path d="M17 27L17 29" stroke="#FFF" stroke-width="4" stroke-linecap="round"/><path d="M25 21H36" stroke="#FFF" stroke-width="4" stroke-linecap="round"/><path d="M25 27H36" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">普通发票管理系统</div>
+                        <div class="site-desc">销售企业普通发票管理系统</div>
+                    </div>
+                </a>
+            </div>
+            
+
+
+
+
+        </div>
+    </section>
+
+    <!-- 第七层网址导航 -->
+
+    <section class="category" id="floor_7">
+        <div class="category-header">
+            <h5>07 HSE数质量</h5>
         </div>
         <div class="category-content">
             <div class="site-item">
@@ -950,9 +1014,9 @@
 
         </div>
     </section>
-    <!-- 第七层网址导航 -->
+    <!-- 第八层网址导航 -->
 
-    <section class="category" id="floor_7">
+    <section class="category" id="floor_8">
         <div class="category-header">
             <h5>07 发展规划</h5>
         </div>
@@ -987,9 +1051,9 @@
 
         </div>
     </section>
-    <!-- 第八层网址导航 -->
+    <!-- 第九层网址导航 -->
 
-    <section class="category" id="floor_8">
+    <section class="category" id="floor_9">
         <div class="category-header">
             <h5>08 商客物流</h5>
         </div>
@@ -1015,9 +1079,9 @@
 
         </div>
     </section>
-    <!-- 第九层网址导航 -->
+    <!-- 第十层网址导航 -->
 
-    <section class="category" id="floor_9">
+    <section class="category" id="floor_10">
         <div class="category-header">
             <h5>09 党建政工</h5>
         </div>
@@ -1034,9 +1098,9 @@
 
         </div>
     </section>
-    <!-- 第十层网址导航 -->
+    <!-- 第十一层网址导航 -->
 
-    <section class="category" id="floor_10">
+    <section class="category" id="floor_11">
         <div class="category-header">
             <h5>10 人力资源</h5>
         </div>
@@ -1090,8 +1154,8 @@
         </div>
     </section>
 
-    <!-- 第十一层网址导航 -->
-    <section class="category" id="floor_11">
+    <!-- 第十二层网址导航 -->
+    <section class="category" id="floor_12">
         <div class="category-header">
             <h5>11 信息运维</h5>
         </div>
@@ -1171,8 +1235,9 @@
 
         </div>
     </section>
-    <!-- 第十二层网址导航 -->
-    <section class="category" id="floor_12">
+
+    <!-- 第十三层网址导航 -->
+    <section class="category" id="floor_13">
         <div class="category-header">
             <h5>12 企业官网</h5>
         </div>
@@ -1208,8 +1273,8 @@
                 <a href="http://www.ejoy365hk.com" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44.0002C35.0457 44.0002 44 35.0459 44 24.0002C44 12.9545 35.0457 4.00024 24 4.00024C12.9543 4.00024 4 12.9545 4 24.0002C4 35.0459 12.9543 44.0002 24 44.0002Z" stroke="#fd0404" stroke-width="4"/><path d="M6 30.9856C8.63192 32.041 10.5266 32.041 11.6839 30.9856C13.4199 29.4025 11.9219 24.5978 14.3532 23.2727C16.7844 21.9476 20.4886 27.8214 23.9508 25.8887C27.4129 23.9559 23.6246 18.8023 26.0272 16.713C28.4298 14.6237 31.554 16.98 32.1001 13.4865C32.6462 9.99304 29.5521 11.5082 28.9584 8.20693C28.5625 6.00611 28.5625 4.84884 28.9584 4.73511" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M29.0209 43.3505C27.1468 41.4325 26.4721 39.6497 26.9969 38.0019C27.7841 35.5303 29.0826 35.6764 29.6488 34.1482C30.2149 32.6199 28.6156 30.4433 32.1643 28.5826C34.5301 27.3421 37.783 28.7794 41.9228 32.8944" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/></svg>
                     <div>
-                        <div class="site-name">捷易国际网上商城</div>
-                        <div class="site-desc">捷易化石国中国际网上商城</div>
+                        <div class="site-name">易捷国际网上商城</div>
+                        <div class="site-desc">化石国中易捷国际网上商城</div>
                     </div>
                 </a>
             </div>
@@ -1222,6 +1287,116 @@
                     </div>
                 </a>
             </div>
+
+        </div>
+    </section>
+
+    <!-- 第十四层网址导航 -->
+    <section class="category" id="floor_14">
+        <div class="category-header">
+            <h5>13 外网资源</h5>
+        </div>
+        <div class="category-content">
+            <div class="site-item">
+                <a href="https://www.ypppt.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">优品PPT</div>
+                        <div class="site-desc">优品PPT</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.1ppt.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">第一PPT</div>
+                        <div class="site-desc">第一PPT</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.51pptmoban.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">51PPT模板</div>
+                        <div class="site-desc">51PPT模板</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.iconfont.cn/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44.0002C35.0457 44.0002 44 35.0459 44 24.0002C44 12.9545 35.0457 4.00024 24 4.00024C12.9543 4.00024 4 12.9545 4 24.0002C4 35.0459 12.9543 44.0002 24 44.0002Z" stroke="#fd0404" stroke-width="4"/><path d="M6 30.9856C8.63192 32.041 10.5266 32.041 11.6839 30.9856C13.4199 29.4025 11.9219 24.5978 14.3532 23.2727C16.7844 21.9476 20.4886 27.8214 23.9508 25.8887C27.4129 23.9559 23.6246 18.8023 26.0272 16.713C28.4298 14.6237 31.554 16.98 32.1001 13.4865C32.6462 9.99304 29.5521 11.5082 28.9584 8.20693C28.5625 6.00611 28.5625 4.84884 28.9584 4.73511" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M29.0209 43.3505C27.1468 41.4325 26.4721 39.6497 26.9969 38.0019C27.7841 35.5303 29.0826 35.6764 29.6488 34.1482C30.2149 32.6199 28.6156 30.4433 32.1643 28.5826C34.5301 27.3421 37.783 28.7794 41.9228 32.8944" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">阿里开源素材</div>
+                        <div class="site-desc">阿里开源素材</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://iconpark.oceanengine.com/home" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">字节跳动开源素材</div>
+                        <div class="site-desc">字节跳动开源素材</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="http://www.pdfdo.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">多功能PDF转换</div>
+                        <div class="site-desc">免费多功能PDF转换</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://note.youdao.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">有道云笔记</div>
+                        <div class="site-desc">有道云笔记</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.puresys.net/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">PURESYS</div>
+                        <div class="site-desc">纯净系统软件下载</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.423down.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">423down</div>
+                        <div class="site-desc">系统软件工具下载</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://apphot.cc/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">APPHOT</div>
+                        <div class="site-desc">优质安卓软件下载</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.wjx.cn/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C29.5229 44 34.5229 41.7613 38.1422 38.1422C41.7613 34.5229 44 29.5229 44 24C44 18.4772 41.7613 13.4772 38.1422 9.85787C34.5229 6.23858 29.5229 4 24 4C18.4772 4 13.4772 6.23858 9.85787 9.85787C6.23858 13.4772 4 18.4772 4 24C4 29.5229 6.23858 34.5229 9.85787 38.1422C13.4772 41.7613 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M24 38C20.134 38 16.634 36.4329 14.1005 33.8996C11.567 31.366 10 27.866 10 24" stroke="#FFF" stroke-width="4" stroke-linecap="round"/></svg>
+                    <div>
+                        <div class="site-name">问卷星</div>
+                        <div class="site-desc">问卷调查表单</div>
+                    </div>
+                </a>
+            </div>
+
 
         </div>
     </section>
@@ -1286,5 +1461,3 @@
 </script>
 </body>
 </html>
-
-
