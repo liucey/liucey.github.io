@@ -8,7 +8,7 @@
         :root {
             --primary-color: #d92121; /* 主色调-红 */
             --primary-light: #f8e0e0; /* 浅红色-悬停背景 */
-            --primary-dark: #b31717; /* 深红色-导航背景 */    
+            --primary-dark: #b31717; /* 深红色-导航背景 */
             --primary-label-color: #ededed; /* 深红色-导航背景 */
             --primary-footer-color:#999;/* 页脚颜色*/
             --text-label-color:#333;/* 标签文字色 */
@@ -72,9 +72,10 @@
             width: 36px;
             height: 36px;
             background-color: var(--primary-color);
-            border-radius: 8px;
-            margin-right: 10px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'%3E%3C/path%3E%3C/svg%3E");
+            border-radius: 12px;
+            margin-right: 12px;
+            /*  url编码：https://www.bejson.com/enc/urlencode/index.html在线转换 */
+            background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M30%206H42V18%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M18%206H6V18%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M30%2042H42V30%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M18%2042H6V30%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M42%206L29%2019%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M19%2029L6%2042%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%223%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E");
             background-repeat: no-repeat;
             background-position: center;
             background-size: 20px;
@@ -117,16 +118,19 @@
         /* 导航栏 */
         nav {
             background-color: var(--primary-color);
+            margin-top: 0;
+            position:sticky;
+            top:70px;
+            z-index: 999;
+
+
+            /* 固定导航栏滚动
+            background-color: var(--primary-color);
             margin-top: 0px;
             position:sticky;
-            top:70px;   
+            top:70px;
             z-index: 999;
-            /*
-            margin-top: 0px;
-            position:sticky;
-            top:70px;   
-            z-index: 999;
-            */      
+            */
         }
 
         .nav-menu {
@@ -143,7 +147,7 @@
         }
 
         .nav-menu li {
-            white-space: nowrap;
+            white-space: nowrap; /* 文本不换行 */
         }
 
         .nav-menu a {
@@ -175,7 +179,7 @@
             background-color: white;
             border-radius: 3px;
         }
-        
+
 
         /* 分类卡片优化 */
         main {
@@ -215,7 +219,7 @@
         .category-header h5::after {
             content: "";
             display: inline-block;
-            width: 40px;
+            width: 30px;
             height: 2px;
             background-color: rgba(255,255,255,0.5);
             margin-left: 15px;
@@ -233,7 +237,7 @@
             padding: 15px;
             border-radius: 8px;
             transition: var(--transition-base);
-            border: 1px solid #f0f0f0;
+            border: 1px solid #FFFFFF; /* #F0F0F0 显示灰色边框*/
         }
 
         .site-item:hover {
@@ -258,13 +262,13 @@
 
         .site-item .site-name {
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             margin-bottom: 4px;
             color: var(--text-tab-color);
         }
 
         .site-item .site-desc {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-light);
             line-height: 1.4;
         }
@@ -286,7 +290,7 @@
         /* 返回顶部按钮 */
         .back-to-top {
             position: fixed;
-            bottom: 30px;
+            bottom: 60px;
             right: 30px;
             width: 50px;
             height: 50px;
@@ -408,142 +412,142 @@
     </style>
 </head>
 <body>
-    <!-- 加载动画 -->
-    <div class="loading" id="loading">
-        <div class="loading-spinner"></div>
+<!-- 加载动画 -->
+<div class="loading" id="loading">
+    <div class="loading-spinner"></div>
+</div>
+
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">湖南石油企业信息门户</div>
+            <div class="search-box">
+                <input type="text" placeholder="搜索网址或关键词..." id="searchInput">
+            </div>
+        </div>
     </div>
+</header>
 
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">湖南石油企业信息门户</div>
-                <div class="search-box">
-                    <input type="text" placeholder="搜索网址或关键词..." id="searchInput">
-                </div>
+<nav>
+    <div class="container">
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#search" class="active">AI搜索</a></li>
+            <li><a href="#floor_2">加能站</a></li>
+            <li><a href="#floor_3">综合</a></li>
+            <li><a href="#floor_4">零售</a></li>
+            <li><a href="#floor_5">易捷</a></li>
+            <li><a href="#floor_6">财务</a></li>
+            <li><a href="#floor_7">HSE</a></li>
+            <li><a href="#floor_8">发规</a></li>
+            <li><a href="#floor_9">商流</a></li>
+            <li><a href="#floor_10">党政</a></li>
+            <li><a href="#floor_11">人事</a></li>
+            <li><a href="#floor_12">运维</a></li>
+            <li><a href="#floor_13">企网</a></li>
+            <li><a href="#floor_14">外网</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <!-- AI搜索分类 -->
+    <section class="category" id="search">
+        <div class="category-header">
+            <h5>01 AI搜索</h5>
+        </div>
+        <div class="category-content">
+            <div class="site-item">
+                <a href="https://ai.sinopec.com" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">长城大模型AI</div>
+                        <div class="site-desc">长城大模型人工智能应用系统</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.deepseek.com" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">DEEPSEEK</div>
+                        <div class="site-desc">全球领先的中国AI引擎</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://tongyi.aliyun.com/qianwen" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">通义千问</div>
+                        <div class="site-desc">询问Qwen，了解更多</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://yiyan.baidu.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">文心一言</div>
+                        <div class="site-desc">百度文心一言你的智能伙伴</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.doubao.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">豆包</div>
+                        <div class="site-desc">字节跳动豆包，能帮你</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://yuanbao.tencent.com/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">腾讯元宝</div>
+                        <div class="site-desc">元宝，你身边的智能助手</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.bing.com" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">Bing</div>
+                        <div class="site-desc">微软推出的搜索引擎</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://www.baidu.com" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">百度</div>
+                        <div class="site-desc">百度一下，你就知道</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://data.stats.gov.cn" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">国家数据中心</div>
+                        <div class="site-desc">国家统计局国家数据查询</div>
+                    </div>
+                </a>
+            </div>
+            <div class="site-item">
+                <a href="https://index.baidu.com/v2/index.html#/" target="_blank">
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <div>
+                        <div class="site-name">百度指数</div>
+                        <div class="site-desc">AI引导数据革命</div>
+                    </div>
+                </a>
             </div>
         </div>
-    </header>
-
-    <nav>
-        <div class="container">
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#search" class="active">AI搜索</a></li>
-                <li><a href="#floor_2">加能站</a></li>
-                <li><a href="#floor_3">综合</a></li>
-                <li><a href="#floor_4">零售</a></li>
-                <li><a href="#floor_5">易捷</a></li>
-                <li><a href="#floor_6">财务</a></li>
-                <li><a href="#floor_7">HSE</a></li>            
-                <li><a href="#floor_8">发规</a></li>
-                <li><a href="#floor_9">商流</a></li>
-                <li><a href="#floor_10">党政</a></li>
-                <li><a href="#floor_11">人事</a></li>
-                <li><a href="#floor_12">运维</a></li>
-                <li><a href="#floor_13">企网</a></li>
-                <li><a href="#floor_14">外网</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="container">
-        <!-- AI搜索分类 -->
-        <section class="category" id="search">
-            <div class="category-header">
-                <h5>01 AI搜索</h5>
-            </div>
-            <div class="category-content">
-                <div class="site-item">
-                    <a href="https://ai.sinopec.com" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">长城大模型AI</div>
-                            <div class="site-desc">长城大模型人工智能应用系统</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://www.deepseek.com" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">DEEPSEEK</div>
-                            <div class="site-desc">全球领先的中国AI引擎</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://tongyi.aliyun.com/qianwen" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">通义千问</div>
-                            <div class="site-desc">询问Qwen，了解更多</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://yiyan.baidu.com/" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">文心一言</div>
-                            <div class="site-desc">百度文心一言你的智能伙伴</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://www.doubao.com/" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">豆包</div>
-                            <div class="site-desc">字节跳动豆包，能帮你</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://yuanbao.tencent.com/" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">腾讯元宝</div>
-                            <div class="site-desc">元宝，你身边的智能助手</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://www.bing.com" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">Bing</div>
-                            <div class="site-desc">微软推出的搜索引擎</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://www.baidu.com" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">百度</div>
-                            <div class="site-desc">百度一下，你就知道</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://data.stats.gov.cn" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">国家数据中心</div>
-                            <div class="site-desc">国家统计局国家数据查询</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="site-item">
-                    <a href="https://index.baidu.com/v2/index.html#/" target="_blank">
-                        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 24H44" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C28.4183 44 32 35.0457 32 24C32 12.9543 28.4183 4 24 4C19.5817 4 16 12.9543 16 24C16 35.0457 19.5817 44 24 44Z" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.85791 10.1421C13.4772 13.7614 18.4772 16 24 16C29.5229 16 34.5229 13.7614 38.1422 10.1421" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M38.1422 37.8579C34.5229 34.2386 29.5229 32 24 32C18.4772 32 13.4772 34.2386 9.85791 37.8579" stroke="#ee0000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        <div>
-                            <div class="site-name">百度指数</div>
-                            <div class="site-desc">AI引导数据革命</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
+    </section>
 
     </section>
     <!-- 第二层网址导航 -->
@@ -552,14 +556,14 @@
             <h5>02 加能站系统</h5>
         </div>
         <div class="category-content">
-             <div class="site-item">
+            <div class="site-item">
                 <a href="https://sso-admin.bmp.sinopec.com/" target="_blank">
                     <!-- <img src="http://www.sinopecnews.com.cn/favicon.ico" alt=""> -->
-                     <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 6H8C6.89543 6 6 6.89543 6 8V16" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 42H8C6.89543 42 6 41.1046 6 40V32" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 42H40C41.1046 42 42 41.1046 42 40V32" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 6H40C41.1046 6 42 6.89543 42 8V16" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 24L16 24" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 32L24 16" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 6H8C6.89543 6 6 6.89543 6 8V16" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 42H8C6.89543 42 6 41.1046 6 40V32" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 42H40C41.1046 42 42 41.1046 42 40V32" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 6H40C41.1046 6 42 6.89543 42 8V16" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 24L16 24" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 32L24 16" stroke="#ee0000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
                         <div class="site-name">新零售平台</div>
                         <div class="site-desc">客户营销|新能源|易服|风控|检维修|资金发票</div>
-                    </div> 
+                    </div>
                 </a>
             </div>
             <div class="site-item">
@@ -654,7 +658,7 @@
             </div>
             <div class="site-item">
                 <a href="https://10.247.48.107/User/Login" target="_blank">
-                   <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="20" width="24" height="18" rx="2" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M18 20V14C18 10.3181 20.6863 8 24 8C27.3137 8 30 10.3181 30 14V20" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 28V30" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 18V30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 18V30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="20" width="24" height="18" rx="2" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M18 20V14C18 10.3181 20.6863 8 24 8C27.3137 8 30 10.3181 30 14V20" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 28V30" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 18V30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 18V30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
                         <div class="site-name">智能锁控系统</div>
                         <div class="site-desc">湖南石油电子铅封系统</div>
@@ -760,7 +764,7 @@
                     </div>
                 </a>
             </div>
-           
+
         </div>
     </section>
 
@@ -907,7 +911,7 @@
                     </div>
                 </a>
             </div>
-                        <div class="site-item">
+            <div class="site-item">
                 <a href="https://cardrpt.salecard.sinopec.com/sinorpt/index.jsp" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 10C4 8.89543 4.89543 8 6 8H42C43.1046 8 44 8.89543 44 10V38C44 39.1046 43.1046 40 42 40H6C4.89543 40 4 39.1046 4 38V10Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M4 16H44" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 32H36" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 10V26" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 10V26" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
@@ -944,7 +948,7 @@
                     </div>
                 </a>
             </div>
-                        <div class="site-item">
+            <div class="site-item">
                 <a href="https://petrol.amap.com/#/" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17 12L4 6V36L17 42L31 36L44 42V12L31 6L17 12Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 6V36" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 12V42" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 9L17 12L31 6L37.5 9" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.5 39L17 42L31 36L37.5 39" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
@@ -1001,7 +1005,7 @@
             </div>
             <div class="site-item">
                 <a href="http://crm.ejoy.sinopec.com/ncmi/nindex.jsp" target="_blank">
-                   <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M35.0563 15.0002L18.4627 7.66508C17.5887 7.27875 16.5635 7.56461 16.0156 8.34745L11.3589 15.0002" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M43 15H5C4.44772 15 4 15.4477 4 16V40C4 40.5523 4.44772 41 5 41H43C43.5523 41 44 40.5523 44 40V16C44 15.4477 43.5523 15 43 15Z" fill="#fd0404" stroke="#fd0404" stroke-width="4"/><path d="M19 23L24.1026 33L29 23" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M35.0563 15.0002L18.4627 7.66508C17.5887 7.27875 16.5635 7.56461 16.0156 8.34745L11.3589 15.0002" stroke="#fd0404" stroke-width="4" stroke-linecap="round"/><path d="M43 15H5C4.44772 15 4 15.4477 4 16V40C4 40.5523 4.44772 41 5 41H43C43.5523 41 44 40.5523 44 40V16C44 15.4477 43.5523 15 43 15Z" fill="#fd0404" stroke="#fd0404" stroke-width="4"/><path d="M19 23L24.1026 33L29 23" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
                         <div class="site-name">会员营销平台</div>
                         <div class="site-desc">会员营销平台</div>
@@ -1044,7 +1048,7 @@
                         <div class="site-desc">增值税发票管理系统</div>
                     </div>
                 </a>
-            </div> 
+            </div>
             <div class="site-item">
                 <a href="https://mdm.sinopec.com" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 31C44 36.5228 39.5228 41 34 41C32.2091 41 30.5281 40.5292 29.0741 39.7046C26.5143 38.2529 24.6579 35.7046 24.1436 32.6983C24.0492 32.1463 24 31.5789 24 31C24 28.4323 24.9678 26.0906 26.5585 24.3198C28.3892 22.2818 31.0449 21 34 21C39.5228 21 44 25.4772 44 31Z" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 12V20V21C31.0449 21 28.3892 22.2818 26.5585 24.3198C24.9678 26.0906 24 28.4323 24 31C24 31.5789 24.0492 32.1463 24.1436 32.6983C24.6579 35.7046 26.5143 38.2529 29.0741 39.7046C26.4116 40.5096 22.8776 41 19 41C10.7157 41 4 38.7614 4 36V28V20V12" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 12C34 14.7614 27.2843 17 19 17C10.7157 17 4 14.7614 4 12C4 9.23858 10.7157 7 19 7C27.2843 7 34 9.23858 34 12Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 28C4 30.7614 10.7157 33 19 33C20.807 33 22.5393 32.8935 24.1436 32.6983" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 20C4 22.7614 10.7157 25 19 25C21.7563 25 24.339 24.7522 26.5585 24.3198" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 41C34 41 30.5 35.1375 30.5 31C30.5 26.8625 34 21 34 21" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 41C34 41 37.5 35.1375 37.5 31C37.5 26.8625 34 21 34 21" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M44 31H24" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1074,7 +1078,7 @@
             <h5>05 易捷非油品</h5>
         </div>
         <div class="category-content">
-          <div class="site-item">
+            <div class="site-item">
                 <a href="http://10.248.235.183:9094/" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M39 32H13L8 12H44L39 32Z" fill="#fd0404"/><path d="M3 6H6.5L8 12M8 12L13 32H39L44 12H8Z" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="39" r="3" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="39" cy="39" r="3" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 22H30" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 26V18" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
@@ -1100,7 +1104,7 @@
                         <div class="site-desc">海信商定天下商业管理平台</div>
                     </div>
                 </a>
-            </div>  
+            </div>
             <div class="site-item">
                 <a href="http://10.246.108.153:3333/omp/cms/loginAction!loginPage.action" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="20.5" cy="41.5" r="3.5" fill="#fd0404"/><circle cx="37.5" cy="41.5" r="3.5" fill="#fd0404"/><path d="M5 6L14 12L19 34H39L44 17H25" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M25 26L32.2727 26L41 26" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1140,7 +1144,7 @@
                     </div>
                 </a>
             </div>
-                        <div class="site-item">
+            <div class="site-item">
                 <a href="https://10.249.203.241/POS/index.jsp" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M39 7H9C6.23858 7 4 9.23858 4 12V36C4 38.7614 6.23858 41 9 41H39C41.7614 41 44 38.7614 44 36V12C44 9.23858 41.7614 7 39 7Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M18 15L24 21L30 15" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 23H31" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 29H31" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 23V34" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
@@ -1167,7 +1171,7 @@
                     </div>
                 </a>
             </div>
-            
+
 
 
 
@@ -1227,7 +1231,7 @@
                     </div>
                 </a>
             </div>
-             <div class="site-item">
+            <div class="site-item">
                 <a href="http://10.213.68.97:18080/ygjl_zb/index.jsp" target="_blank">
                     <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="7" y="7" width="17" height="34" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M24 7H28" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 7H35" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M33 41H35" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M41 7V9" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M41 15V17" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M41 23V25" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M41 31V33" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M41 39V41" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M27 41H24" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 4V44" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
@@ -1297,7 +1301,7 @@
             </div>
             <div class="site-item">
                 <a href="https://10.247.48.107/User/Login" target="_blank">
-                   <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="20" width="24" height="18" rx="2" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M18 20V14C18 10.3181 20.6863 8 24 8C27.3137 8 30 10.3181 30 14V20" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 28V30" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 18V30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 18V30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="20" width="24" height="18" rx="2" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M18 20V14C18 10.3181 20.6863 8 24 8C27.3137 8 30 10.3181 30 14V20" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 28V30" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 18V30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M42 18V30" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
                         <div class="site-name">智能锁控系统</div>
                         <div class="site-desc">油罐车电子铅封管理系统</div>
@@ -1344,7 +1348,7 @@
             </div>
             <div class="site-item">
                 <a href="http://10.190.1.251:8080/wqpt/login.jsp" target="_blank">
-                   <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 44H38C39.1046 44 40 43.1046 40 42V14H30V4H10C8.89543 4 8 4.89543 8 6V42C8 43.1046 8.89543 44 10 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 4L40 14" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="4" fill="#FFF" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 36C32 31.5817 28.4183 28 24 28C19.5817 28 16 31.5817 16 36" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 44H38C39.1046 44 40 43.1046 40 42V14H30V4H10C8.89543 4 8 4.89543 8 6V42C8 43.1046 8.89543 44 10 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 4L40 14" stroke="#fd0404" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="4" fill="#FFF" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M32 36C32 31.5817 28.4183 28 24 28C19.5817 28 16 31.5817 16 36" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
                         <div class="site-name">人事合同网签系统</div>
                         <div class="site-desc">化石国中人事合同网签系统</div>
@@ -1371,7 +1375,7 @@
             </div>
             <div class="site-item">
                 <a href="http://10.190.140.135:1100" target="_blank">
-                   <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M16 24L22 30L34 18" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 44C29.5228 44 34.5228 41.7614 38.1421 38.1421C41.7614 34.5228 44 29.5228 44 24C44 18.4772 41.7614 13.4772 38.1421 9.85786C34.5228 6.23858 29.5228 4 24 4C18.4772 4 13.4772 6.23858 9.85786 9.85786C6.23858 13.4772 4 18.4772 4 24C4 29.5228 6.23858 34.5228 9.85786 38.1421C13.4772 41.7614 18.4772 44 24 44Z" fill="#fd0404" stroke="#fd0404" stroke-width="4" stroke-linejoin="round"/><path d="M16 24L22 30L34 18" stroke="#FFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     <div>
                         <div class="site-name">爱题知识训练系统</div>
                         <div class="site-desc">爱题知识训练系统</div>
@@ -1628,201 +1632,202 @@
 
         </div>
     </section>
-      
 
-    </main>
 
-    <footer>
-        <div class="container">
-            <p>湖南石油企业信息门户V2026.01.01© 2010-2026 LUCESTUDIO All Rights Reserved 车车工作室 </p>
-        </div>
-    </footer>
+</main>
 
-    <!-- 返回顶部按钮 -->
-    <div class="back-to-top" id="backToTop">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 19V5M5 12L12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+<footer>
+    <div class="container">
+        <p>湖南石油企业信息门户V2026.01.01© 2010-2026 LUCESTUDIO All Rights Reserved 车车工作室 </p>
     </div>
+</footer>
 
-    <script>
-        // 页面加载动画
-        document.addEventListener('DOMContentLoaded', function() {
-            const loading = document.getElementById('loading');
-            loading.classList.add('show');
-            
-            // 模拟加载完成
-            setTimeout(() => {
-                loading.classList.remove('show');
-            }, 800);
-        });
+<!-- 返回顶部按钮 -->
+<div class="back-to-top" id="backToTop">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M5 12L12 5L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>
 
-        // 导航菜单点击效果 + 平滑滚动
-       // 获取导航菜单元素
-        const navMenu = document.getElementById('navMenu');
-        // 获取导航菜单初始位置（距离页面顶部的距离）
-        const navOffsetTop = navMenu.offsetTop;
-        // 监听页面滚动事件
-        window.addEventListener('scroll', function() {
-            // 获取当前滚动距离
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // 当滚动距离超过导航菜单初始位置时，添加固定类
-            if (scrollTop >= navOffsetTop) {
-                navMenu.classList.add('fixed');
-                // 给body添加padding，避免内容跳动
-                document.body.style.paddingTop = navMenu.offsetHeight + 'px';
-            } else {
-                // 否则移除固定类
-                navMenu.classList.remove('fixed');
-                document.body.style.paddingTop = 0;
-            }
-        });
+<script>
+    // 页面加载动画
+    document.addEventListener('DOMContentLoaded', function() {
+        const loading = document.getElementById('loading');
+        loading.classList.add('show');
 
-        const navLinks = document.querySelectorAll('.nav-menu a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // 移除所有active类
-                navLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-                
-                // 平滑滚动到目标位置
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // 模拟加载完成
+        setTimeout(() => {
+            loading.classList.remove('show');
+        }, 800);
+    });
+    // 导航菜单点击效果 + 平滑滚动
+    // 获取导航菜单元素
+    const navMenu = document.getElementById('navMenu');
+    // 获取导航菜单初始位置（距离页面顶部的距离）
+    const navOffsetTop = navMenu.offsetTop;
 
-        // 优化搜索功能 - 实时筛选
-        const searchInput = document.getElementById('searchInput');
-        const siteItems = document.querySelectorAll('.site-item');
-        
-        searchInput.addEventListener('input', function() {
-            const query = this.value.trim().toLowerCase();
-            
-            if (!query) {
-                // 清空搜索时恢复所有站点显示
-                siteItems.forEach(item => {
-                    item.style.display = '';
-                    // 移除高亮
-                    const siteName = item.querySelector('.site-name');
-                    const siteDesc = item.querySelector('.site-desc');
-                    siteName.innerHTML = siteName.textContent;
-                    siteDesc.innerHTML = siteDesc.textContent;
+    // 监听页面滚动事件
+    window.addEventListener('scroll', function() {
+        // 获取当前滚动距离
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+        // 当滚动距离超过导航菜单初始位置时，添加固定类
+        if (scrollTop >= navOffsetTop) {
+            navMenu.classList.add('fixed');
+            // 给body添加padding，避免内容跳动
+            document.body.style.paddingTop = navMenu.offsetHeight + 'px';
+        } else {
+            // 否则移除固定类
+            navMenu.classList.remove('fixed');
+            document.body.style.paddingTop = 0;
+        }
+    });
+
+   //平滑滚动
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // 移除所有active类
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+
+            // 平滑滚动到目标位置
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
                 });
-                return;
             }
-            
-            // 筛选并高亮匹配内容
+        });
+    });
+
+    // 优化搜索功能 - 实时筛选
+    const searchInput = document.getElementById('searchInput');
+    const siteItems = document.querySelectorAll('.site-item');
+
+    searchInput.addEventListener('input', function() {
+        const query = this.value.trim().toLowerCase();
+
+        if (!query) {
+            // 清空搜索时恢复所有站点显示
             siteItems.forEach(item => {
+                item.style.display = '';
+                // 移除高亮
                 const siteName = item.querySelector('.site-name');
                 const siteDesc = item.querySelector('.site-desc');
-                const nameText = siteName.textContent.toLowerCase();
-                const descText = siteDesc.textContent.toLowerCase();
-                
-                // 判断是否匹配
-                const isMatch = nameText.includes(query) || descText.includes(query);
-                
-                if (isMatch) {
-                    item.style.display = '';
-                    
-                    // 高亮匹配的文本
-                    const highlightName = nameText.replace(
-                        new RegExp(query, 'gi'), 
-                        match => `<span class="highlight">${match}</span>`
-                    );
-                    const highlightDesc = descText.replace(
-                        new RegExp(query, 'gi'), 
-                        match => `<span class="highlight">${match}</span>`
-                    );
-                    
-                    siteName.innerHTML = highlightName;
-                    siteDesc.innerHTML = highlightDesc;
-                } else {
-                    item.style.display = 'none';
-                }
+                siteName.innerHTML = siteName.textContent;
+                siteDesc.innerHTML = siteDesc.textContent;
             });
-        });
-
-        // 回车触发搜索提示
-        searchInput.addEventListener('keyup', function(e) {
-            if (e.key === 'Enter') {
-                const query = this.value.trim();
-                if (query) {
-                    // 统计匹配数量
-                    const matchedCount = document.querySelectorAll('.site-item:not([style*="display: none"])').length;
-                    alert(`找到 ${matchedCount} 个匹配结果: "${query}"`);
-                }
-            }
-        });
-
-        // 滚动监听 - 高亮当前导航 + 显示返回顶部按钮
-        const backToTop = document.getElementById('backToTop');
-        const categories = document.querySelectorAll('.category');
-     
-        
-        window.addEventListener('scroll', function() {
-            const scrollY = window.scrollY;
-            
-            // 显示/隐藏返回顶部按钮
-            if (scrollY > 500) {
-                backToTop.classList.add('show');
-            } else {
-                backToTop.classList.remove('show');
-            }
-            
-            // 高亮当前可见的分类导航
-            let currentCategoryId = '';
-            const viewportTop = scrollY + 100;
-            
-            categories.forEach(category => {
-                const rect = category.getBoundingClientRect();
-                const categoryTop = scrollY + rect.top;
-                
-                if (categoryTop <= viewportTop && (categoryTop + rect.height) > viewportTop) {
-                    currentCategoryId = category.id;
-                }
-            });
-            
-            if (currentCategoryId) {
-                navLinks.forEach(link => {
-                    link.classList.remove('active'); // 先移除所有导航的高亮
-                    // 匹配导航链接的href和当前分类ID
-                    if (link.getAttribute('href') === `#${currentCategoryId}`) {
-                        link.classList.add('active'); // 给匹配的导航添加高亮
-                    }
-                });
-            }
-        });
-
-        // 返回顶部按钮点击事件
-        backToTop.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // 响应式优化 - 移动端导航栏优化
-        function handleResize() {
-            const navMenu = document.getElementById('navMenu');
-            if (window.innerWidth < 768) {
-                navMenu.style.overflowX = 'auto';
-            } else {
-                navMenu.style.overflowX = 'visible';
-            }
+            return;
         }
 
-        // 初始化和窗口大小变化时执行
-        window.addEventListener('resize', handleResize);
-        handleResize();
-    </script>
+        // 筛选并高亮匹配内容
+        siteItems.forEach(item => {
+            const siteName = item.querySelector('.site-name');
+            const siteDesc = item.querySelector('.site-desc');
+            const nameText = siteName.textContent.toLowerCase();
+            const descText = siteDesc.textContent.toLowerCase();
+
+            // 判断是否匹配
+            const isMatch = nameText.includes(query) || descText.includes(query);
+
+            if (isMatch) {
+                item.style.display = '';
+
+                // 高亮匹配的文本
+                const highlightName = nameText.replace(
+                    new RegExp(query, 'gi'),
+                    match => `<span class="highlight">${match}</span>`
+                );
+                const highlightDesc = descText.replace(
+                    new RegExp(query, 'gi'),
+                    match => `<span class="highlight">${match}</span>`
+                );
+
+                siteName.innerHTML = highlightName;
+                siteDesc.innerHTML = highlightDesc;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    });
+
+    // 回车触发搜索提示
+    searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            const query = this.value.trim();
+            if (query) {
+                // 统计匹配数量
+                const matchedCount = document.querySelectorAll('.site-item:not([style*="display: none"])').length;
+                alert(`找到 ${matchedCount} 个匹配结果: "${query}"`);
+            }
+        }
+    });
+
+    // 滚动监听 - 高亮当前导航 + 显示返回顶部按钮
+    const backToTop = document.getElementById('backToTop');
+    const categories = document.querySelectorAll('.category');
+
+
+    window.addEventListener('scroll', function() {
+        const scrollY = window.scrollY;
+
+        // 显示/隐藏返回顶部按钮
+        if (scrollY > 500) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+
+        // 高亮当前可见的分类导航
+        let currentCategoryId = '';
+        const viewportTop = scrollY + 100;
+
+        categories.forEach(category => {
+            const rect = category.getBoundingClientRect();
+            const categoryTop = scrollY + rect.top;
+
+            if (categoryTop <= viewportTop && (categoryTop + rect.height) > viewportTop) {
+                currentCategoryId = category.id;
+            }
+        });
+
+        if (currentCategoryId) {
+            navLinks.forEach(link => {
+                link.classList.remove('active'); // 先移除所有导航的高亮
+                // 匹配导航链接的href和当前分类ID
+                if (link.getAttribute('href') === `#${currentCategoryId}`) {
+                    link.classList.add('active'); // 给匹配的导航添加高亮
+                }
+            });
+        }
+    });
+
+    // 返回顶部按钮点击事件
+    backToTop.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // 响应式优化 - 移动端导航栏优化
+    function handleResize() {
+        const navMenu = document.getElementById('navMenu');
+        if (window.innerWidth < 768) {
+            navMenu.style.overflowX = 'auto';
+        } else {
+            navMenu.style.overflowX = 'visible';
+        }
+    }
+
+    // 初始化和窗口大小变化时执行
+    window.addEventListener('resize', handleResize);
+    handleResize();
+</script>
 </body>
 </html>
